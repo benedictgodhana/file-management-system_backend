@@ -53,5 +53,5 @@ The File Management System is a web application built with Laravel that allows u
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+   https://github.com/benedictgodhana/file-management-system_backend.git
+   cd file-management-system_backend
