@@ -129,4 +129,18 @@ class DirectoryController extends Controller
 
         return response()->json($subDirectories);
     }
+
+
+
+    public function addSubdirectory(Request $request, Directory $directory)
+{
+    $validatedData = $request->validate([
+        'name' => 'required|string|min:3',
+    ]);
+    
+    $subdirectory = $directory->children()->create($validatedData);
+
+    return response()->json($subdirectory, 201);
+}
+
 }

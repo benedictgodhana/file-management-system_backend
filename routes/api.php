@@ -41,5 +41,7 @@ Route::prefix('directories')->group(function () {
     Route::put('{id}', [DirectoryController::class, 'update']); // Update a directory
     Route::delete('{id}', [DirectoryController::class, 'destroy']); // Delete a directory
     Route::get('/directories/{id}/files', [DirectoryController::class, 'getFiles']);
+    Route::post('/{directory}/children', [DirectoryController::class, 'addSubdirectory']);
+
 
 });
